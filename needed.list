@@ -19,9 +19,11 @@ neofetch
 git
 treefetch
 cava
-nvim
+neovim
 pacman-contrib
 reflector
 pfetch
 htop
 pipes.sh
+libcanberra
+wl-clipboard
