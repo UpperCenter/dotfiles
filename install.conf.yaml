@@ -31,4 +31,3 @@
   
 - shell:
   - [mkdir -p ~/.local/state/zsh, enabling zsh history]
-  - [git clone https://github.com/jandamm/zgenom.git ~/.config/zsh/.zgenom", installing zgenom]
