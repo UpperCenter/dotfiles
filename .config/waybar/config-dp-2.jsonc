@@ -2,20 +2,20 @@
     "layer": "top",
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 35, // Waybar height (to be removed for auto height)
+    "height": 36, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // "spacing": 4, // Gaps between modules (4px)
-    // "output": "DP-2",    
+    "output": "DP-2",    
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "clock", "custom/kernel", "mpd"],
+    "modules-left": ["wlr/workspaces", "clock", "custom/pacman", "mpd"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "custom/pacman", "temperature", "cpu", "disk", "memory", "pulseaudio"],
+    "modules-right": ["temperature", "cpu", "memory", "pulseaudio"],
 
     // Modules configuration
   
     "clock": {
         "format": "<span color=\"#7aa2f7\"> </span>{:%H:%M:%S}",
-        "format-alt": "<span color=\"#7aa2f7\"> </span>{:%d/%m/%Y}",
+        "format-alt": "<span color=\"#7aa2f7\"> </span>{:%d-%m-%Y}",
         "interval": 1
     },
     "cpu": {
@@ -29,19 +29,12 @@
     },
     
     "temperature": {
-        "thermal-zone": 1,
-        "format": " {temperatureC}°C",
-        "critical-threshold": 70,
-        "format-critical": " {temperatureC}°C",
-        "interval": 3
-    },
-
-    "disk": {
-        "interval": 30,
-        "format": "<span color=\"#7aa2f7\">󰋊 {percentage_used}%</span>",
-        "path": "/",
-        "tooltip": true,
-        "tooltip-format": "NVME - {used} used out of {total} on {path} ({percentage_used}%)"
+    // "thermal-zone": 2,
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    // "hwmon-path": "/tmp/nvidia-temp",
+    // "critical-threshold": 80,
+    "format": "<span color=\"#7aa2f7\"> </span>{temperatureC}°C",
+    "interval": 3
     },
     
     "pulseaudio": {
@@ -53,7 +46,7 @@
     },
     "hyprland/window": {
        	"max-length": 48,
-        "format": "{}"
+        "format": "{}",
     },
 
     "custom/kernel": {
@@ -63,8 +56,8 @@
     },
     
     "custom/pacman": {
-        "exec": "/home/uppercenter/.config/waybar/scripts/package-updates.sh",
-        "format": "<span color=\"#7aa2f7\"> <",
+        "exec": "$XDG_CONFIG_HOME/waybar/scripts/package-updates.sh",
+        "format": "<span color=\"#7aa2f7\"> </span>{}",
         "interval": 600,
         "signal": 1
     },
