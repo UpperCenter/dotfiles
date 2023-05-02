@@ -7,12 +7,23 @@
     // "spacing": 4, // Gaps between modules (4px)
     "output": "DP-1",
     // Choose the order of the modules
-    "modules-left": ["wlr/workspaces", "clock", "custom/kernel", "mpd"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "temperature", "cpu", "memory", "pulseaudio"],
-
+    "modules-left": [
+        "wlr/workspaces",
+        "clock",
+        "custom/kernel",
+        "mpd"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "tray",
+        "temperature",
+        "cpu",
+        "memory",
+        "pulseaudio"
+    ],
     // Modules configuration
-  
     "clock": {
         "format": "<span color=\"#7aa2f7\"> </span>{:%H:%M:%S}",
         "format-alt": "<span color=\"#7aa2f7\"> </span>{:%d-%m-%Y}",
@@ -27,42 +38,38 @@
         "format": "<span color=\"#7aa2f7\"> </span>{used}GiB",
         "interval": 3
     },
-    
     "temperature": {
-    // "thermal-zone": 2,
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-    // "hwmon-path": "/tmp/nvidia-temp",
-    // "critical-threshold": 80,
-    "format": "<span color=\"#7aa2f7\"> </span>{temperatureC}°C",
-    "interval": 3
+        "hwmon-path": "/sys/class/hwmon/hwmon0/temp1_input",
+        "critical-threshold": 80,
+        "format": "<span color=\"#7aa2f7\"> </span>{temperatureC}°C",
+        "interval": 3
     },
-    
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
         "format": "<span color=\"#7aa2f7\">{icon} </span>{volume}%",
         "format-muted": "<span color=\"#f7768e\"> </span>Muted",
-        "format-icons": ["", "", ""],
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
         "on-click": "pavucontrol"
     },
-
     "hyprland/window": {
-       	"max-length": 48,
+        "max-length": 48,
         "format": "{}",
     },
-
     "custom/kernel": {
         "exec": "uname -r | cut -d '-' -f1",
         "interval": "once",
         "format": "<span color=\"#7aa2f7\"> </span>{}"
     },
-    
     "custom/pacman": {
         "exec": "$XDG_CONFIG_HOME/waybar/scripts/package-updates.sh",
         "format": "<span color=\"#7aa2f7\"> </span>{}",
         "interval": 600,
         "signal": 1
     },
-
     "custom/sep": {
         "format": "|",
         "interval": "once"
