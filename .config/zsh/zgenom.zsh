@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # load zgenom
-source "${ZDOTDIR}/.zgenom/zgenom.zsh"
+source "${HOME}/.zgenom/zgenom.zsh"
 
 # check for plugin and zgenom updates every 7 days
 # this does not increase the startup time.

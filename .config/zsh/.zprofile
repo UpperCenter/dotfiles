@@ -1,11 +1,5 @@
 #!/usr/bin/env zsh
 
-# Set XDG Base Directory paths
-export XDG_CONFIG_HOME="${HOME}/.config"          # User configuration files
-export XDG_CACHE_HOME="${HOME}/.cache"            # User cache files
-export XDG_DATA_HOME="${HOME}/.local/share"       # User data files
-export XDG_STATE_HOME="${HOME}/.local/state"      # User state files
-
 # Set other tool and configuration paths to clean up ~
 export CARGO_HOME="$XDG_DATA_HOME"/cargo          # Rust's Cargo package manager
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv       # NVIDIA CUDA cache
@@ -25,7 +19,7 @@ export PATH=$PATH:~/.local/scripts:~/.local/bin:~/.local/share/cargo/bin
 export SUDO_PROMPT='[] Enter Password: '
 
 # Set default editor
-export EDITOR='lvim'
+export EDITOR='nano'
 
 # execute Hyprland when in TTY1 only
 if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
