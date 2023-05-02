@@ -27,3 +27,4 @@ alias gp='git push'
 # Misc aliases
 alias updates='checkupdates; paru -Qum'  # Check system and AUR updates
 alias rs='curl --data-binary @- https://paste.rs | wl-copy'  # Share output to a pastebin and copy to clipboard
+alias mirrors='sudo reflector --sort rate --verbose --age 12 --latest 20 --protocol https -c GB -c DE --save /etc/pacman.d/mirrorlist'
