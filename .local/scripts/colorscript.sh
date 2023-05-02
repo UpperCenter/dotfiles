@@ -5,7 +5,7 @@
 if [[ "$DEV" -gt 0 ]]; then
     DIR_COLORSCRIPTS="./colorscripts"
 else
-    DIR_COLORSCRIPTS="$HOME/.local/share/asciiart"
+    DIR_COLORSCRIPTS="$HOME/dotfiles/ascii"
 fi
 
 if command -v find &>/dev/null; then
