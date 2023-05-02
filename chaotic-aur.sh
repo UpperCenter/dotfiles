@@ -26,6 +26,6 @@ echo -e "\n[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" >>/etc/pac
 
 # Update the package database
 log "Updating the package database..."
-pacman -Sy || handle_error "Failed to update the package database"
+pacman -Sy --noconfirm || handle_error "Failed to update the package database"
 
 log "Chaotic AUR successfully installed!"
