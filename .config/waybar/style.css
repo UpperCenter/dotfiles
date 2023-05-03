@@ -53,7 +53,8 @@ tooltip {
 #memory,
 #pulseaudio,
 #tray,
-#mpd {
+#mpd,
+#custom-spotify {
   background: rgba(21, 22, 30, 0.7);
   padding: 0px 10px;
   margin: 3px 0px;
@@ -61,7 +62,7 @@ tooltip {
 }
 
 /* set up rounding to make these modules look like seperate pills */
-#mpd {
+#mpd, #custom-spotify {
   border-radius: 8px 8px 8px 8px;
   margin-left: 4px
 }
