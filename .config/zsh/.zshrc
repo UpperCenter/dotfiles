@@ -11,3 +11,4 @@ source ${ZDOTDIR}/keybinds-late.zsh # Source late load keybinds
 
 # Run fetch script on zsh start
 macchina --theme fazzi
+export PATH=$PATH:/home/uppercenter/.spicetify
