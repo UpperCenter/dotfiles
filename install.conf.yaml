@@ -37,6 +37,7 @@
 
 - shell:
     - [assets/bootstrap/paru.sh, Installing paru]
+    - [assets/bootstrap/chaotic-aur.sh, Installing ChaoticAUR]
     - [assets/bootstrap/packages.sh, Installing packages]
     - [assets/bootstrap/zgenom.sh, Installing zgenom]
     - [chsh -s $(which zsh), Making zsh the default shell]
