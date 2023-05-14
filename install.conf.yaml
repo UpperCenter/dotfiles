@@ -27,6 +27,7 @@
     ~/.local/scripts: .local/scripts
     ~/.local/share/fonts: .local/share/fonts
     ~/.local/share/rofi: .local/share/rofi 
+    ~/.config/nvim: .config/nvim 
     ~/Pictures/Wallpapers: Wallpapers
     ~/.zshenv: .zshenv
   
