@@ -12,19 +12,24 @@ border = "rounded"
 visible = false
 
 [box.inner_margin]
-x = 1
+x = 0
 y = 0
 
 [custom_ascii]
-path = "~/dotfiles/ascii/cat"
+path = "~/dotfiles/ascii/arch"
 color = "Blue"
 
 [keys]
 kernel = " kr"
-wm = "缾wm"
+wm = " wm"
 distro = " os"
 shell = " sh"
-packages = " pk"
-memory = " mm"
-terminal = "\ue795 tr"
-host = "\uf25b hs"
+packages = " pk"
+memory = "󰍛 mm"
+terminal = " tr"
+host = " hs"
+
+[palette]
+type = "Light"
+visible = true
+glyph = "󰊠 "
